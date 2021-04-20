@@ -15,7 +15,7 @@ README.md - this file
 
 RepExpress_processing.pdf - documentation.
 
-Main processing scripts:
+Scripts - containing Main processing scripts:
 
     generate_combine_gtfs.sh - to build STAR index and build required GTFs
 
@@ -25,7 +25,7 @@ Main processing scripts:
 
     contrast_express.sh - take combined expression counts for two different series of samples
 
-Example_scripts:  A series of parameter files (examples) showing the required parameters for each process.
+Example_scripts - example parameter files (examples) showing the required parameters for each process.
 
     Readme.txt - a description of each example parameter file
 
