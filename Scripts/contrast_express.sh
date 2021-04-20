@@ -84,7 +84,7 @@ sample2_cols=`awk 'NR==2{print NF-2;}NR>2{exit 0;}' "${TE_matrix2_file}" | head 
 # take the TE and strand id column from both matrices to make sorted list
 # need to have an appropriate header line for later join processing
 
-printf "#TE_id\tstrand\t" > all_TE_list.txt;
+printf "#TE_id\tstrand\n" > all_TE_list.txt;
 
 cut -f 1,2 "${TE_matrix1_file}" "${TE_matrix2_file}" | sort -u >> all_TE_list.txt;
 
@@ -124,7 +124,7 @@ else
   for (col = 3; col <= (fldcount[1] + 0); col++)
     printf(",2.%d",col);
   printf("' %s %s | join -o '0",filelist[0],filelist[1]);
-  for (col = 2; col <= (fldcount[1] + 2); col++)
+  for (col = 2; col <= fldcount[1]; col++)
     printf(",1.%d",col);
   for (col = 3; col <= (fldcount[2] + 0); col++)
     printf(",2.%d",col);
