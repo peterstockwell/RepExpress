@@ -1,0 +1,3 @@
+SRR2422921_1_at_M_U_FC_tpm.genloc
+SRR2422922_1_at_M_U_FC_tpm.genloc
+SRR2422924_1_at_M_U_FC_tpm.genloc
