@@ -25,7 +25,9 @@ Scripts - containing Main processing scripts:
 
     contrast_express.sh - take combined expression counts for two different series of samples
 
-Example_scripts - example parameter files (examples) showing the required parameters for each process.
+    run_deseq2.sh - differential gene expression by Bioconductor DESeq2 analysis
+
+Example_scripts - example parameter files showing the required parameters for each process.
 
     Readme.txt - a description of each example parameter file
 
@@ -38,6 +40,11 @@ Example_scripts - example parameter files (examples) showing the required parame
     genloc_file_list.txt - file with names of genloc files needed for compare_express.sh
 
     contrast_params.sh - details for the contrast_express.sh run
+
+    deseq2_params.sh - details for DESeq2 running with run_deseq2.sh
+
+    brain_tpm_list.txt & testis_tpm_list.txt - lists of TPM featureCounts files for deseq2_parameters
+
 =======
 A pipeline for quantifying and exploring transposable element expression
 >>>>>>> d18818786de4bd04803bd882c33fc34b6800c5ab

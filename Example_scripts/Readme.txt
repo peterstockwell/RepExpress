@@ -17,6 +17,10 @@ brain_geneloc_list.txt_combined.txt and
 testis_genloc_list_txt_combined.txt are output files from step 2
 above.
 
+4. Differential expression analysis with DESeq2 under R-Bioconductor
+with the script run_deseq2.sh uses the parameter file deseq2_params.sh
+and the two TPM featureCounts output files brain_tpm_list.txt &
+testis_tpm_list.txt.
 
 
 
