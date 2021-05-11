@@ -183,7 +183,6 @@ DESEQ_RSCRIPT
 cat << RSCRIPT_ADDENDUM >> run_DESeq2.R
 write.table(res_sorted,file="${DESeq2_output_file}",sep="\t",quote=FALSE,col.names=NA,row.names=TRUE,append=TRUE)
 q()
-n
 RSCRIPT_ADDENDUM
 
 if [[ -n ${verbose} ]]; then
