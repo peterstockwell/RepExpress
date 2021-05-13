@@ -45,6 +45,15 @@ Example_scripts - example parameter files showing the required parameters for ea
 
     brain_tpm_list.txt & testis_tpm_list.txt - lists of TPM featureCounts files for deseq2_parameters
 
+Installation:
+
+Scripts in the Scripts directory can either be copied into your
+current working directory or some other appropriate place.  The
+documentation in RepExpress_processing.pdf assumes the former.  It may
+necessary to make the scripts executable by
+
+chmod a+x *.sh
+
 =======
 A pipeline for quantifying and exploring transposable element expression
 >>>>>>> d18818786de4bd04803bd882c33fc34b6800c5ab
