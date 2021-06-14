@@ -100,7 +100,7 @@ fi
 
 # append modified repeat gtf to gencode genomic gtf
 
-cat "${gencode_gene_gtf}" ucsc_repeats_uniq.gtf > "${gene_repeat_gtf}";
+cat "${gencode_gene_gtf}" "${ucsc_repeats_uniq_gtf}" > "${gene_repeat_gtf}";
 
 if [[ -n ${verbose} ]]; then
 
@@ -185,6 +185,8 @@ awk -f ensembl_ID_to_gname.awk "${gencode_gene_gtf}" > "${ensid_vs_gname}";
 printf "genome setup complete\n";
 
 if [[ -n delete_temp_files ]]; then
+
+echo "Deleting scripts";
 
 rm make_uniq_gtf_ex_allfields.awk ensembl_ID_to_gname.awk
 
