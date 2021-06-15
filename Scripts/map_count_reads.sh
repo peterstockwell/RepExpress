@@ -179,6 +179,11 @@ nonzerotpms = 0;
 
 NR==2{printf("%s\t%s\n",$0,colhdr);
 atotal = get_tpm_param(FILENAME);
+if (atotal <= 0.0)
+  {
+  printf("TPM calculation failed, check setting of featurecounts_strandedness (-p) in mapping parameters file\n");
+  exit(1);
+  }
 }
 
 NR>2{if($(NF-1)+0!=0)
