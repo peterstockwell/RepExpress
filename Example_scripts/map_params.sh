@@ -21,7 +21,7 @@ read2_fastq="/mnt/hcs/dsm-pathology-ecclesRNA/Erin_Macaulay_placental/sra_data/S
 
 # featureCounts needs a strandedness parameter reflecting the way the
 # library was generated.  Values are:
-#   unstranded       "-s 0"  (default if setting is left blank)
+#   unstranded       "-s 0"  (default if setting is left blank, necessary for single ended reads)
 #   stranded         "-s 1"
 #   reverse stranded "-s 2"
 
