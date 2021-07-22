@@ -141,12 +141,12 @@ ostring = "0,";
 for (i = 1; i <= NR; i++)
   ostring = ostring sprintf("1.%d,",i+1);
 cmd = cmd prvcmd;
-prvcmd = sprintf(" %s | %s -o '%s2.%d' - ",jfilename,basecmd,ostring,countcol);
+prvcmd = sprintf(" '%s' | %s -o '%s2.%d' - ",jfilename,basecmd,ostring,countcol);
 prvfile = jfilename;
 }
 
 END{printf("printf \"%s\\n\" > %s\n",hdr,outfile);
-printf("%s %s | tr \" \" \"\\t\" | awk '$1!~/==>/&&$1!=\"Geneid\"' >> %s\n",cmd,prvfile,outfile);
+printf("%s '%s' | tr \" \" \"\\t\" | awk '$1!~/==>/&&$1!=\"Geneid\"' >> '%s'\n",cmd,prvfile,outfile);
 }
 MATRIX_BUILD
 
