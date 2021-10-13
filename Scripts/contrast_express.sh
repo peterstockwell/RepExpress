@@ -200,7 +200,7 @@ if [[ -n ${delete_temp_files} ]]; then
 rm join_build.awk
 rm apply_limits.awk
 rm Join_matrices.sh
-rm "$2""_joined.txt"
+#rm "$2""_joined.txt"
 
 fi
 
