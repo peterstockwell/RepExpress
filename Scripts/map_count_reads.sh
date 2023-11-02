@@ -217,12 +217,13 @@ TPM_SCRIPT
 
 cat << 'SUBSCRIPT' > get_tpm_parameter.awk
 # return the 'A' value for TPM from FeatureCounts output files.
+# correct 2-Nov-2023 for scaling parameter
 
 BEGIN{totscaled=0.0;}
 
 NR>2{if($(NF-1)!=0)totscaled+=$NF/$(NF-1);}
 
-END{printf("%.2f\n",totscaled*1.0e3);}
+END{printf("%.2f\n",totscaled);}
 SUBSCRIPT
 
 # apply these scripts to featureCounts output and sort by uniq id
